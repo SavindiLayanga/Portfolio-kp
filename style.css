@@ -1346,6 +1346,7 @@ img {
     }
     .service .service-content .content {
         height: 123px;
+        padding: 0.8rem;
     }
     .service-paragra{
         font-size: 13px;
@@ -1353,6 +1354,7 @@ img {
     }
     .service-content .content .service-paragra {
         padding-top: 0.08em;
+    }
 
 }
 
