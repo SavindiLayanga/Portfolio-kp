@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case-06</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="style/normalize.css">
+
+    <style>
+        section{
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            background-image: url("assets/case-6-resources/sky.jpg") ;
+            overflow: hidden;
+        }
+
+        section>div:nth-child(1){
+
+            width: 400%;
+            height: 25%;
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            background-image: url("assets/case-6-resources/360_F_253429899_9dY41vzXnZ8Fun58l4JEHUDdAnQkhaMg-removebg-preview.png");
+            animation: road 10s infinite reverse;
+            animation-timing-function: linear;
+
+        }
+
+        section>div:nth-child(2){
+            width: 400%;
+            height: 28%;
+            z-index: 1;
+            position: absolute;
+            bottom: 24%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            background-image: url("assets/case-6-resources/city-png-11552953413x7zgiwoc0k-removebg-preview.png");
+            animation: road 15s infinite reverse;
+            animation-timing-function: linear;
+
+        }
+
+        section>div:nth-child(3) img{
+            width: 320px;
+            z-index: 2;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            margin: auto;
+        }
+
+        section>div:nth-child(4){
+            position: absolute;
+            left: 50%;
+            bottom: 17%;
+            z-index: 2;
+        }
+
+        section>div:nth-child(4) img{
+            width: 60px;
+            height: 60px;
+            animation: wheel 1s infinite;
+            animation-timing-function: linear;
+        }
+
+        section>div:nth-child(4)>img:nth-child(1){
+            position: absolute;
+            left: 26px;
+            top:-10px
+        }
+
+        section>div:nth-child(4)>img:nth-child(2){
+            position: absolute;
+            left: 222px;
+            top: -10px;
+        }
+
+
+        @keyframes road {
+            0%{
+                left: -300%;
+            }
+            100%{
+                left: 0;
+            }
+        }
+
+        @keyframes wheel {
+            0%{
+                rotate: 0deg;
+            }
+
+            100%{
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div>
+        <img src="assets/case-6-resources/car.png">
+    </div>
+    <div>
+        <img src="assets/case-6-resources/wheel.png">
+        <img src="assets/case-6-resources/wheel.png">
+    </div>
+</section>
+</body>
+</html>

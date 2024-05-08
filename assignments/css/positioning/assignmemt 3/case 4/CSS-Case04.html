@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-Case04</title>
+    <link rel="stylesheet" href="style/normalize.css">
+
+    <style>
+        #firstHead{
+            height: 10vh;
+            width: 100%;
+            background-color: red;
+        }
+        #secondHead{
+            height: 10vh;
+            width: 100%;
+            background-color: darkblue;
+        }
+        #thirdHead{
+            height: 10vh;
+            width: 100%;
+            background-color: #4F4F4FFF;
+
+        }
+        #forthHead{
+            height: 10vh;
+            width: 100%;
+            background-color: darkred;
+        }
+
+        section{
+            height: 100vh;
+            width: 100%;
+            border: black 1px solid;
+            top: 10px;
+        }
+        section>div>p {
+            height: 10vh;
+            width: 100%;
+            font-family: "Samsung Sans", serif;
+            text-align: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            font-size: 72px;
+
+        }
+
+        h1 {
+            font-family: "Samsung Sans",serif;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: left;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        #firContain{
+            height: 90vh;
+            width: 100%;
+            background-color: white;
+            color: black;
+        }
+        #secContain{
+            height: 90vh;
+            width: 100%;
+            background-color: lightskyblue;
+            color: #ffffff;
+        }
+        #thirContain{
+            height: 90vh;
+            width: 100%;
+            background-color: grey;
+            color: #ffffff;        }
+        #forthContain{
+            height: 90vh;
+            width: 100%;
+            background-color: red;
+            color: #ffffff;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <section>
+
+            <h1 id="firstHead">Card 1</h1>
+
+        <div  id="firContain">
+            <p>Hello</p>
+        </div>
+    </section>
+
+    <section>
+
+            <h1  id="secondHead">Card 2</h1>
+
+        <div id="secContain">
+            <p>How</p>
+        </div>
+    </section>
+
+    <section>
+
+            <h1  id="thirdHead">Card 3</h1>
+
+        <div   id="thirContain">
+            <p>Are</p>
+        </div>
+    </section>
+
+    <section>
+        <h1  id="forthHead">Card 4</h1>
+
+    <div   id="forthContain">
+        <p>You..?</p>
+    </div>
+    </section>
+</body>
+</html>

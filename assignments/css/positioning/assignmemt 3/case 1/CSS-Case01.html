@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usage of Cascade Style Sheets-Case 01</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        #section{
+            width: 100vw;
+            height: 100vh;
+            border: 1px solid black;
+            position: relative;
+        }
+        #centerCircle1 {
+            height: 25vh;
+            width: 25vh;
+            background-color: #ffffff;
+            border-radius: 100%;
+            position: absolute;
+            top: -12.5%;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        #centerCircle2{
+            height: 25vh;
+            width: 25vh;
+            background-color: #ffffff;
+            border-radius: 100%;
+            position: absolute;
+            margin:auto;
+            bottom: -12.5%;
+            right: 0;
+            left: 0;
+        }
+        #cornerCircle1{
+            height: 20vh;
+            width: 20vh;
+            background-color: white;
+            border-bottom-right-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #cornerCircle2{
+            height: 17vh;
+            width: 17vh;
+            background-color: white;
+            border-bottom-left-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #cornerCircle3{
+            height: 17vh;
+            width: 17vh;
+            background-color: white;
+            border-top-right-radius: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        #cornerCircle4{
+            height: 17vh;
+            width: 17vh;
+            background-color: white;
+            border-top-left-radius: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .SquareOnCircle{
+            height: 10vh;
+            width: 10vh;
+            background-color: #ff0000;
+            position: absolute;
+            margin:auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .divCircle{
+            height: 30vh;
+            width: 30vh;
+            background-color: white;
+            border-radius: 100%;
+            position: absolute;
+            margin:auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        #SquareMainOnCircle{
+            height: 10vh;
+            width: 10vh;
+            background-color: #ff0000;
+            border-radius: 100%;
+            position: absolute;
+            margin:auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+        }
+        #divCenter{
+            background-color: white;
+            width: 20vh;
+            height: 20vh;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        #div1{
+            height: 50%;
+            width: 50%;
+            background-color: #cc0000;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #div2{
+            height: 50%;
+            width: 50%;
+            background-color: #007705;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        #div3{
+            height: 50%;
+            width: 50%;
+            background-color: #ffa805;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        #div4{
+            height: 50%;
+            width: 50%;
+            background-color: #e239ff;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<section id="section">
+    <div id="div1">
+        <div class="divCircle">
+            <div class="SquareOnCircle"></div>
+        </div>
+    </div>
+    <div id="div2">
+        <div class="divCircle">
+            <div class="SquareOnCircle"></div>
+        </div>
+    </div>
+    <div id="div3">
+        <div class="divCircle">
+            <div class="SquareOnCircle"></div>
+        </div>
+    </div>
+    <div id="div4">
+        <div class="divCircle">
+            <div class="SquareOnCircle"></div>
+        </div>
+    </div>
+    <div id="divCenter">
+        <div id="SquareMainOnCircle"></div>
+    </div>
+    <div id="cornerCircle1"></div>
+    <div id="cornerCircle2"></div>
+    <div id="cornerCircle3"></div>
+    <div id="cornerCircle4"></div>
+    <div id="centerCircle1"></div>
+    <div id="centerCircle2"></div>
+</section>
+</body>
+</html>

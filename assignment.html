@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Assignments</title>
+
+    <style>
+        :root{
+            /*light mode*/
+            --main-color: #03C988;
+            --main-sub-color:#17AC89;
+
+            /*dark mode*/
+            --header-color:#212524;
+            --bg-color: #18181C;
+            --bg-sub-color:#2B2B2B;
+            --for-shadow:#474A56;
+            --font-color: #ffffff;
+            --sub-font-color: #F0F0F0 ;
+            --progress-bar-bg-color:#4EEFC9;
+            --for-shadow-topics:#EEEEEE;
+            --for-service-shadow-topic:#34ea8a;
+            --wave:#B4B4B8;
+        }
+        ::-webkit-scrollbar{
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track{
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb{
+            border-radius: 25px;
+            border: 2px solid var(--main-color);
+        }
+        .shadow-topic h1 {
+            /*color: var(--bg-color);*/
+            color: var(--for-shadow-topics) ;
+            font-size: 80px;
+            font-weight: 1000;
+            text-shadow: 2px 2px 35px #31363F;
+            -webkit-text-stroke-width: 0.5px;
+            -webkit-text-stroke-color: #DDDDDD;
+            opacity: 0.6;
+            text-align: center;
+        }
+
+        .assignments{
+            padding: 20px 10%;
+            position: relative;
+            background-color: var(--bg-color);
+        }
+
+        .a-container{
+            max-width: 1140px;
+            margin: auto;
+            padding: 20px 20px 0;
+        }
+
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 20px;
+        }
+
+        .assignments .filter-buttons{
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .assignments .filter-buttons ul{
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+        .assignments .filter-buttons ul li{
+            color: var(--main-color);
+            font-weight: 500;
+            display: inline-block;
+            margin: 0px 8px;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding-bottom: 0px;
+        }
+        .assignments .filter-buttons ul li.active{
+            color: #5FD068;
+            border-bottom: 2px solid #5FD068;
+        }
+
+        .assignment-container{
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 60px 0;
+        }
+        .assignment-card{
+            width: 85%;
+            height: 200px;
+            border: 1px solid var(--progress-bar-bg-color);
+            /*margin: 2px;*/
+            padding: 20px;
+        }
+
+        .assignment-container .assignment-card{
+            position: relative;
+            box-shadow: 0 0 1rem var(--for-shadow);
+            overflow: hidden;
+            display: flex;
+            color: var(--sub-font-color);
+            /*border-radius: 25px;*/
+        }
+
+        .assignment-card img{
+            width: 100%;
+            /*height: 180px;*/
+            /*transition: 5s ease;*/
+            border-radius: 25px;
+        }
+        /*.assignment-card:hover img{*/
+        /*    transform: scale(1.1);*/
+        /*}*/
+
+        .assignment-card .assigment-layer{
+            position: absolute;
+            bottom: 0;
+            left: -18%;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            -ms-flex-align: center;
+            padding: 0 4rem;
+            transform: translateY(100%);
+            transition: .5s ease;
+            opacity: 0.8;
+            text-align: center;
+        }
+        .assignment-card:hover .assigment-layer{
+            transform: translateY(0);
+        }
+
+        .assignments a .assigment-layer h4{
+            font-size: 1.5rem;
+            opacity: 2;
+        }
+
+        .assignments .button{
+            right: 150px;
+            bottom: 0;
+            position: absolute;
+            width: 120px;
+            height: 40px;
+            border: 2px solid var(--main-sub-color);
+            text-decoration: none;
+            color: var(--sub-font-color);
+            font-size: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            transition: all .6s;
+            margin: 1%;
+        }
+        .assignments button:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--progress-bar-bg-color);
+        }
+
+    </style>
+</head>
+
+<body>
+<section class="assignments" id="assignments" data-scene>
+    <div class="shadow-topic">
+        <h1>Assignments</h1>
+    </div>
+
+    <div class="a-container">
+        <div class="row">
+            <div class="filter-buttons">
+                <ul id="filter-btns">
+                    <li class="active" data-target="all">All</li>
+                    <li data-target="Animation">Animation</li>
+                    <li data-target="Bootstrap">Bootstrap</li>
+                    <li data-target="grid">Grid Layout</li>
+                    <li data-target="JS-frames">JS-frames</li>
+                    <li data-target="Positioning">Positioning</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="assignment-container">
+            <div class="assignment-card" data-id="Animation">
+                <img src="assets/images/assignments/animation-case1.gif"/>
+                <div class="assigment-layer">
+                    <h4>Assignment 1</h4>
+                    <a href="assignments/CSS/CSS/CASE-01/index.html" target="_blank"> </a>
+                </div>
+            </div>
+            <div class="assignment-card" data-id="Animation">
+                <img src="assets/images/assignments/animation-case2.gif"/>
+                <div class="assigment-layer">
+                    <h4>Assignment 2</h4>
+                    <a href="assignments/CSS/CSS/CASE-02/index.html" target="_blank"> </a>
+                </div>
+            </div>
+            <div class="assignment-card" data-id="Animation">
+                <img src="assets/images/assignments/animation-case3.gif"/>
+                <div class="assigment-layer">
+                    <h4>Assignment 3</h4>
+                    <a href="assignments/CSS/CSS/CASE-03/index.html" target="_blank"> </a>
+                </div>
+            </div>
+            <div class="assignment-card" data-id="Animation">
+                <img src="assets/images/assignments/20240430234241-ezgif.com-video-to-gif-converter.gif"/>
+                <div class="assigment-layer">
+                    <h4>Assignment 4</h4>
+                    <a href="assignments/CSS/CSS/CASE-04/index.html" target="_blank" ></a>
+                </div>
+            </div>
+            <div class="assignment-card" data-id="Animation">
+                <img src="assets/images/assignments/animation-case5.gif"/>
+                <div class="assigment-layer">
+                    <h4>Assignment 5</h4>
+                    <a href="assignments/CSS/CSS/CASE-05/index.html" target="_blank"> </a>
+                </div>
+            </div>
+            <div class="assignment-card" data-id="Animation">
+                <img src="assets/images/assignments/animation-case6.gif"/>
+                <div class="assigment-layer">
+                    <h4>Assignment 6</h4>
+                    <a href="assignments/CSS/CSS/CASE-06/index.html" target="_blank"> </a>
+                </div>
+            </div>
+            <div class="assignment-card" data-id="grid">
+                <img src="assets/images/assignments/F29G6AAIKIKTAXQ.webp"/>
+                <div class="assigment-layer">
+                    <h4>Assignment 4</h4>
+                    <a href="assignments/CSS/CSS/CASE-04/index.html" target="_blank" ></a>
+                </div>
+            </div>
+            <div class="assignment-card" data-id="grid">
+                <img src="assets/images/assignments/F29G6AAIKIKTAXQ.webp"/>
+                <div class="assigment-layer">
+                    <h4>Assignment 5</h4>
+                    <a href="assignments/CSS/CSS/CASE-05/index.html" target="_blank"> </a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <img src="assets/images/assignments/F29G6AAIKIKTAXQ.webp"/>
+                <div class="assigment-layer">
+                    <h4>Assignment 6</h4>
+                    <a href="assignments/CSS/CSS/CASE-06/index.html" target="_blank"> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="button"> Previous </a>
+
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const filterBtns = document.querySelectorAll('#filter-btns li');
+        const assignmentCards = document.querySelectorAll('.assignment-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                filterBtns.forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                const target = this.getAttribute('data-target');
+
+                assignmentCards.forEach(card => {
+                    const cardId = card.getAttribute('data-id');
+                    if (target === 'all' || cardId === target) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

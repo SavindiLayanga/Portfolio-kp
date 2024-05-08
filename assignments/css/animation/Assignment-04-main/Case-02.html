@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case-02</title>
+
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/fontawsome/css/all.min.css">
+
+    <style>
+        body{
+            background-color: purple;
+        }
+        div{
+            width: 300px;
+            aspect-ratio: 1/1;
+            background-color: gray;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            /*border: 10px white;*/
+            /*border-top-color: red;*/
+        }
+
+        div h1{
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            color: black;
+        }
+
+        /*psuedo element */
+        div::before{  /*divge athule thiyena ekata mokak hari add karanna on nn */
+            content: " ";
+            border: 20px solid white;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-top-color: red;
+        }
+        div:hover::before{
+            transform: rotate(360deg);
+            transition-duration: 2s;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1> RWAD</h1>
+</div>
+</body>
+</html>

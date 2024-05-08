@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case-03</title>
+
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/fontawsome/css/all.min.css">
+
+    <style>
+        body{
+            background-color: #12372A;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        div{
+            background-color: purple;
+            width: 200px;
+            height: 80px;
+            border-radius: 25px;
+            position: absolute;
+            animation-name: animation-squre;
+            animation-duration: 15s;
+        }
+        div:hover{
+            transform: rotate(360deg);
+            transition-duration: 2s;
+        }
+
+        @keyframes animation-squre {
+            0%{
+                margin-top: 0;
+                margin-left: 0;
+                transform: rotate(0deg);
+                background-color: yellow;
+            }
+            25%{
+                margin-top: 0;;
+                margin-left: calc(100vw - (200px));
+                transform: rotate(180deg);
+                background-color:  #16FF00;
+            }
+            50%{
+                margin-top: calc(100vh - (80px));
+                margin-left: calc(100vw - (200px));
+                transform: rotate(0deg);
+                background-color: #15F5BA;
+            }
+            75%{
+                margin-top: calc(100vh - (80px));
+                margin-left: 0;
+                transform: rotate(180deg);
+                background-color:#387ADF ;
+            }
+            100%{
+                margin-top: 0;
+                margin-left: 0;
+                transform: rotate(0deg);
+                background-color:#E90064 ;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>

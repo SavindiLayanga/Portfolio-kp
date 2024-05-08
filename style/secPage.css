@@ -1,0 +1,21 @@
+#scndPage {
+    height: 100vh;
+    width: 100%;
+
+}
+
+#2ndLeftSide {
+    height: 100vh;
+    width: 50%;
+    left: 0;
+    background-color: #34ea8a;
+    position: absolute;
+}
+
+#2ndRightSide {
+    height: 1020vh;
+    width: 50%;
+    right: 0;
+    background-color: #0b5ab0; /* Set the background color here */
+    position: absolute;
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS-Case03</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <style>
+
+        #greyCircle {
+            height: 32vh;
+            width: 32vh;
+            border-radius: 100%;
+            background-color: transparent;
+            border:grey 10px solid;
+            position: fixed;
+            margin:auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #redCircle {
+            height: 29.5vh;
+            width: 29.5vh;
+            border-radius: 100%;
+            background-color: transparent;
+            border: rgb(232, 1, 1) 10px solid;
+            position: fixed;
+            margin:auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+       #firstSec #firstCirclePara{
+           height: 29.5vh;
+           width: 29.5vh;
+           border-radius: 100%;
+           background-color: purple;
+           position: absolute;
+           margin:auto;
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+        }
+        #secondSec #secondCirclePara{
+            height: 29.5vh;
+            width: 29.5vh;
+            border-radius: 100%;
+            background-color: #007bff;
+            position: absolute;
+            margin:auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+        }
+        #thirdSec #thirdCirclePara{
+            height: 29.5vh;
+            width: 29.5vh;
+            border-radius: 100%;
+            background-color: orangered;
+            position: absolute;
+            margin:auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+        }
+
+
+        section{
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+        section>div>p {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right:0;
+            position: absolute;
+            font-family: "Samsung Sans", serif;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="greyCircle">
+    </div>
+    <div id="redCircle">
+    </div>
+    <section id="firstSec">
+    <div id="firstCirclePara">
+        <p><br><br>Hello</p>
+    </div>
+    </section>
+    <section  id="secondSec">
+    <div id="secondCirclePara">
+        <p><br><br>Welcome to</p>
+    </div>
+    </section>
+    <section  id="thirdSec">
+    <div id="thirdCirclePara">
+        <p><br>Institute<br>
+            of<br>
+            Software Engineering</p>
+    </div>
+    </section>
+
+
+
+</body>
+</html>
