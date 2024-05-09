@@ -1356,6 +1356,55 @@ img {
         padding-top: 0.08em;
     }
 
+    /* ********* contact page ************ */
+    .contact {
+        padding: 50px 100px;
+    }
+    .contact .content .info i {
+        font-size: 22px;
+        width: 48px;
+        height: 48px;
+        margin-left: -50%;
+    }
+    .contact .content .info h4 {
+        font-size: 14px;
+        margin-top: -9%;
+        margin-left: -35%;
+    }
+    .contact .content .info h4 span {
+        font-size: 14px;
+    }
+    .contact-form {
+        margin-left: 32%;
+        width: 108%;
+        padding: 34px;
+        height: 330px;
+    }
+    .contact-form h2 {
+        font-size: 28px;
+    }
+    .contact-form .inputBox input, .contact-form .inputBox textarea {
+        width: 97%;
+        padding: 5px 0;
+        font-size: 14px;
+    }
+    .submit-button {
+        left: 263px;
+        width: 93px;
+        height: 31px;
+    }
+    /*footer*/
+    .footer-basic .footer .content .foot-para {
+        margin-top: 3%;
+        font-size: 16px;
+        margin-left: 15%;
+    }
+    .footer-basic .copyright {
+        margin-top: -12vh;
+        margin-left: -9%;
+    }
+
+
 }
 
 
