@@ -33,7 +33,6 @@
     border-radius: 25px;
     border: 2px solid var(--main-color);
 }
-
 #preloader{
     background: var(--bg-color);
     background-size: cover;
@@ -172,19 +171,19 @@ nav a:hover{
 section aside #proFilePic {
     position: absolute;
     top: 51%;
-    right: 11.5%;
+    right: 21.5%;
     transform: translate(0, -50%);
-    height: 109%;
-    width: 564px;
+    height: 117%;
+    width: 440px;
     z-index: 1;
 }
 section aside #proFilePic_behind {
     position: absolute;
     top: 57%;
-    right: 6.5%;
+    right: 14.5%;
     transform: translate(0, -50%);
     height: 125%;
-    width: 645px;
+    width: 535px;
 }
 
 #leftSideWords {
@@ -910,7 +909,7 @@ img {
 .contact{
     position: relative;
     min-height: 100vh;
-    padding: 150px 100px;
+    padding: 100px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -991,12 +990,12 @@ img {
 .contact-form .inputBox span{
     position: absolute;
     left: 0;
-    padding: 5px 0;
+    padding: 8px 0;
     pointer-events: none;
-    font-size: 14px;
+    font-size: 10px;
     margin: 10px 15px;
     transition: 0.5s;
-    color:var(--bg-color);
+    color:var(--sub-font-color);
     text-transform: uppercase;
 }
 .contact-form .inputBox input:focus,
@@ -1014,10 +1013,7 @@ img {
     font-size: 12px;
     padding: 0 5px;
     background: #373331;
-    border-left: 1px solid var(--main-color);
-    border-right: 1px solid var(--main-color);
-    border-top: 1px solid var(--main-color);
-    border-bottom: 1px solid var(--main-color);
+    border: 1px solid var(--main-color);
     letter-spacing: 0.2em;
 }
 .submit-button {
@@ -1042,10 +1038,28 @@ img {
     transform: scale(1.1);
     box-shadow: 0 0 20px var(--main-color);
 }
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
 
 /* contact form end */
-
-
 
 /* ##################################################### contact end ##################################################################### */
 
@@ -1055,7 +1069,7 @@ img {
     padding:40px 0;
     background-color:var(--bg-sub-color);
     color:var(--font-color);
-    max-height: 25vh;
+    max-height: 42vh;
 }
 
 .footer-basic .social {
@@ -1064,7 +1078,7 @@ img {
     color: var(--for-service-shadow-topic);
 }
 
-.footer-basic .social > a {
+.footer-basic .social a {
     font-size:24px;
     width:40px;
     height:40px;
@@ -1079,7 +1093,7 @@ img {
     transition: all .6s;
 }
 
-.footer-basic .social > a:hover {
+.footer-basic .social a:hover {
     opacity:0.9;
     transform: scale(1.1);
     box-shadow: 0 0 20px var(--main-color);
@@ -1093,21 +1107,25 @@ img {
 }
 
 .footer-basic .footer .content .foot-para{
-    margin-top: 4%;
-    font-size: 18px;
+    margin-top: 3%;
+    font-size: 16px;
     font-weight: 300;
     color: var(--font-color);
     text-align: center;
-    margin-left: 31%;
+    margin-left: 42%;
 
 }
 .footer-basic .copyright {
-    margin-top:-19vh;
-    text-align:center;
-    font-size:13px;
-    color:#aaa;
-    margin-bottom:0;
+    margin-top: -19vh;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    background: var(--bg-color);
+    width: 100%;
+    height: 1%;
+    padding: 21px
 }
+
 
 /************* footer End ****************/
 
@@ -1150,6 +1168,7 @@ img {
     }
 }
 
+/*||||||||||||||||||||||||| 1024 |||||||||||||||||||||||||||||||*/
 @media screen and (max-width: 1024px) {
     /********** header ************/
     header {
@@ -1394,17 +1413,324 @@ img {
         height: 31px;
     }
     /*footer*/
+    .footer-basic {
+        max-height: 35vh;
+        padding: 22px 0;
+    }
     .footer-basic .footer .content .foot-para {
         margin-top: 3%;
         font-size: 16px;
         margin-left: 15%;
     }
     .footer-basic .copyright {
-        margin-top: -12vh;
-        margin-left: -9%;
+        margin-top: -9vh;
+        margin-left: 0%;
+    }
+}
+
+/*||||||||||||||||||||||||| 768 |||||||||||||||||||||||||||||||*/
+@media screen and (max-width: 768px) {
+    /********** header ************/
+
+
+    /********** home page *************/
+    #sectionPage {
+        height: 86vh;
+    }
+    #helloIm {
+        top: -39px;
+    }
+    #name {
+        top: -2%;
+    }
+    #mypost {
+        margin-top: 47%;
+    }
+    #firstPagePara {
+        top: 38%;
+        font-size: 12px;
+        left: 3%;
+    }
+    section aside #proFilePic {
+        right: 14%;
+        width: 72%;
+        height: 75%;
+        top: 36%;
+    }
+    section aside #proFilePic_behind {
+        right: 15%;
+        width: 75%;
+        height: 85%;
+        top: 39%;
+    }
+    #buttonField {
+        left: 50%;
+        top: 55%;
     }
 
+    /* Adjustments for social media tags */
+    .sectionPage .social {
+        margin-top: 66%;
+    }
 
+    /* /////////// shadow topics //////////// */
+    .shadow-topic h1 {
+        font-size: 50px;
+    }
+
+    /* ******* about me ************ */
+    #profilePicContainer {
+        width: 150px;
+        height: 150px;
+        margin-left: 40%;
+    }
+    #abo_para {
+        font-size: 14px;
+        width: 708px;
+    }
+    #skill {
+        padding-bottom: 23%;
+    }
+
+    /* *********** education page *************** */
+    .education-container {
+        padding: 37px 20%;
+    }
+
+    /* ********* expertise page *************** */
+
+
+    /* ************** assignment page ******************* */
+    .assignment-card {
+        width: 105%;
+        height: 169px;
+    }
+    .assignment-card img {
+        width: 119%;
+        height: 143px;
+        margin-top: -4%;
+        margin-left: -9%;
+    }
+    .assignments .button {
+        bottom: 3%;
+    }
+
+    /* *********** gallery page ************ */
+    .gallery_4to {
+        height: 133px;
+        margin-left: 16%;
+    }
+    p {
+        height: 156px;
+    }
+
+    /* *********** service page ************ */
+    .service {
+        padding: 35px 0;
+    }
+    .service .service-content .content {
+        height: 127px;
+        padding: 0.8rem;
+    }
+    .service-box .service-content:before {
+        top: 4rem;
+        left: -0.9rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .service .service-content .content {
+        height: 127px;
+        padding: 0.8rem;
+        width: 110%;
+        left: -4%;
+    }
+
+    /* ********* contact page ************ */
+    .contact-form {
+        margin-left: 34%;
+        width: 101%;
+        height: 286px;
+    }
+    .contact .content .info i {
+        margin-left: -39%;
+    }
+    .contact .content .info h4 {
+        font-size: 13px;
+        margin-top: -10%;
+        margin-left: -22%;
+    }
+    .contact .content .info h4 span {
+        font-size: 13px;
+    }
+    .contact-form .inputBox {
+        position: relative;
+        width: 100%;
+        margin-top: 5px;
+    }
+    .submit-button {
+        left: 255px;
+        width: 74px;
+        height: 25px;
+        font-size: 13px;
+        margin-top: 0%;
+    }
+    .footer-basic .footer .content .foot-para {
+        font-size: 15px;
+        margin-left: 1%;
+    }
 }
+
+/*||||||||||||||||||||||||| 425 |||||||||||||||||||||||||||||||*/
+@media screen and (max-width: 425px) {
+    /********** header ************/
+
+
+    /********** home page *************/
+    #sectionPage {
+        height: 86vh;
+    }
+    #helloIm {
+        top: -39px;
+    }
+    #name {
+        top: -2%;
+    }
+    #mypost {
+        margin-top: 47%;
+    }
+    #firstPagePara {
+        top: 38%;
+        font-size: 12px;
+        left: 3%;
+    }
+    section aside #proFilePic {
+        right: 14%;
+        width: 72%;
+        height: 75%;
+        top: 36%;
+    }
+    section aside #proFilePic_behind {
+        right: 15%;
+        width: 75%;
+        height: 85%;
+        top: 39%;
+    }
+    #buttonField {
+        left: 50%;
+        top: 55%;
+    }
+
+    /* Adjustments for social media tags */
+    .sectionPage .social {
+        margin-top: 66%;
+    }
+
+    /* /////////// shadow topics //////////// */
+    .shadow-topic h1 {
+        font-size: 50px;
+    }
+
+    /* ******* about me ************ */
+    #profilePicContainer {
+        width: 150px;
+        height: 150px;
+        margin-left: 40%;
+    }
+    #abo_para {
+        font-size: 14px;
+        width: 708px;
+    }
+    #skill {
+        padding-bottom: 23%;
+    }
+
+    /* *********** education page *************** */
+    .education-container {
+        padding: 37px 20%;
+    }
+
+    /* ********* expertise page *************** */
+
+
+    /* ************** assignment page ******************* */
+    .assignment-card {
+        width: 105%;
+        height: 169px;
+    }
+    .assignment-card img {
+        width: 119%;
+        height: 143px;
+        margin-top: -4%;
+        margin-left: -9%;
+    }
+    .assignments .button {
+        bottom: 3%;
+    }
+
+    /* *********** gallery page ************ */
+    .gallery_4to {
+        height: 133px;
+        margin-left: 16%;
+    }
+    p {
+        height: 156px;
+    }
+
+    /* *********** service page ************ */
+    .service {
+        padding: 35px 0;
+    }
+    .service .service-content .content {
+        height: 127px;
+        padding: 0.8rem;
+    }
+    .service-box .service-content:before {
+        top: 4rem;
+        left: -0.9rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .service .service-content .content {
+        height: 127px;
+        padding: 0.8rem;
+        width: 110%;
+        left: -4%;
+    }
+
+    /* ********* contact page ************ */
+    .contact-form {
+        margin-left: 34%;
+        width: 101%;
+        height: 286px;
+    }
+    .contact .content .info i {
+        margin-left: -39%;
+    }
+    .contact .content .info h4 {
+        font-size: 13px;
+        margin-top: -10%;
+        margin-left: -22%;
+    }
+    .contact .content .info h4 span {
+        font-size: 13px;
+    }
+    .contact-form .inputBox {
+        position: relative;
+        width: 100%;
+        margin-top: 5px;
+    }
+    .submit-button {
+        left: 255px;
+        width: 74px;
+        height: 25px;
+        font-size: 13px;
+        margin-top: 0%;
+    }
+    .footer-basic .footer .content .foot-para {
+        font-size: 15px;
+        margin-left: 1%;
+    }
+}
+
 
 
