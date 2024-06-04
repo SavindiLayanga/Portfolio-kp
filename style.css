@@ -1129,45 +1129,6 @@ img {
 
 /************* footer End ****************/
 
-/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-
-@media screen and (max-width: 320px) {
-
-}
-@media screen and (max-width: 768px) {
-    .logo {
-        float: none;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .nav-links {
-        float: none;
-        text-align: center;
-    }
-
-    .nav-links li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .burger {
-        width: 30px;
-        height: 3px;
-        background-color: #333;
-        margin: 5px;
-    }
-
-    #toggleBtn {
-        display: block;
-        text-align: right;
-    }
-
-    #slideMenu {
-        display: none;
-    }
-}
-
 /*||||||||||||||||||||||||| 1024 |||||||||||||||||||||||||||||||*/
 @media screen and (max-width: 1024px) {
     /********** header ************/
@@ -1429,9 +1390,40 @@ img {
 }
 
 /*||||||||||||||||||||||||| 768 |||||||||||||||||||||||||||||||*/
+
 @media screen and (max-width: 768px) {
     /********** header ************/
+    .logo {
+        float: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
+    .nav-links {
+        float: none;
+        text-align: center;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .burger {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px;
+    }
+
+    #toggleBtn {
+        display: block;
+        text-align: right;
+    }
+
+    #slideMenu {
+        display: none;
+    }
 
     /********** home page *************/
     #sectionPage {
@@ -1581,155 +1573,15 @@ img {
 }
 
 /*||||||||||||||||||||||||| 425 |||||||||||||||||||||||||||||||*/
-@media screen and (max-width: 425px) {
-    /********** header ************/
 
-
-    /********** home page *************/
-    #sectionPage {
-        height: 86vh;
+@media (max-width: 425px){
+    header {
+        height: 3%;
     }
     #helloIm {
-        top: -39px;
-    }
-    #name {
-        top: -2%;
-    }
-    #mypost {
-        margin-top: 47%;
-    }
-    #firstPagePara {
-        top: 38%;
-        font-size: 12px;
-        left: 3%;
-    }
-    section aside #proFilePic {
-        right: 14%;
-        width: 72%;
-        height: 75%;
-        top: 36%;
-    }
-    section aside #proFilePic_behind {
-        right: 15%;
-        width: 75%;
-        height: 85%;
-        top: 39%;
-    }
-    #buttonField {
-        left: 50%;
-        top: 55%;
+        top: -50px;
     }
 
-    /* Adjustments for social media tags */
-    .sectionPage .social {
-        margin-top: 66%;
-    }
-
-    /* /////////// shadow topics //////////// */
-    .shadow-topic h1 {
-        font-size: 50px;
-    }
-
-    /* ******* about me ************ */
-    #profilePicContainer {
-        width: 150px;
-        height: 150px;
-        margin-left: 40%;
-    }
-    #abo_para {
-        font-size: 14px;
-        width: 708px;
-    }
-    #skill {
-        padding-bottom: 23%;
-    }
-
-    /* *********** education page *************** */
-    .education-container {
-        padding: 37px 20%;
-    }
-
-    /* ********* expertise page *************** */
-
-
-    /* ************** assignment page ******************* */
-    .assignment-card {
-        width: 105%;
-        height: 169px;
-    }
-    .assignment-card img {
-        width: 119%;
-        height: 143px;
-        margin-top: -4%;
-        margin-left: -9%;
-    }
-    .assignments .button {
-        bottom: 3%;
-    }
-
-    /* *********** gallery page ************ */
-    .gallery_4to {
-        height: 133px;
-        margin-left: 16%;
-    }
-    p {
-        height: 156px;
-    }
-
-    /* *********** service page ************ */
-    .service {
-        padding: 35px 0;
-    }
-    .service .service-content .content {
-        height: 127px;
-        padding: 0.8rem;
-    }
-    .service-box .service-content:before {
-        top: 4rem;
-        left: -0.9rem;
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-    .service .service-content .content {
-        height: 127px;
-        padding: 0.8rem;
-        width: 110%;
-        left: -4%;
-    }
-
-    /* ********* contact page ************ */
-    .contact-form {
-        margin-left: 34%;
-        width: 101%;
-        height: 286px;
-    }
-    .contact .content .info i {
-        margin-left: -39%;
-    }
-    .contact .content .info h4 {
-        font-size: 13px;
-        margin-top: -10%;
-        margin-left: -22%;
-    }
-    .contact .content .info h4 span {
-        font-size: 13px;
-    }
-    .contact-form .inputBox {
-        position: relative;
-        width: 100%;
-        margin-top: 5px;
-    }
-    .submit-button {
-        left: 255px;
-        width: 74px;
-        height: 25px;
-        font-size: 13px;
-        margin-top: 0%;
-    }
-    .footer-basic .footer .content .foot-para {
-        font-size: 15px;
-        margin-left: 1%;
-    }
 }
 
 
