@@ -506,11 +506,19 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 1200, // Animation duration
+            offset: 200, // Offset from the original trigger point
+            easing: 'ease-in-out', // Easing function
+            once: true, // Whether animation should happen only once - while scrolling down
+            mirror: false, // Whether elements should animate out while scrolling past them
+        });
     </script>
 
-    </body>
+
+</body>
 
     </html>
 </body>
