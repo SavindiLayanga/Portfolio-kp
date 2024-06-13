@@ -16,6 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anek+Gurmukhi:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -30,7 +33,7 @@
             <ul id="slideMenu">
                 <a href="#about_me">About Me</a>
                 <a href="#education">Education</a>
-                <a href="#expertise">Expertise</a>
+                <a href="#portfolio">Expertise</a>
                 <a href="#assignments">My Tasks</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#service">Service</a>
@@ -224,86 +227,178 @@
 
         <!-- ****************************************** Expertise Start ********************************************* -->
 
-        <section class="expertise" id="expertise" data-scene>
-            <div class="shadow-topic">
-                <h1> E X P E R T I S E </h1>
+    <section class="portfolio" id="portfolio" data-scene>
+
+        <div class="shadow-topic" >
+            <h1> E D U C A T I O N </h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="filter-buttons">
+                    <ul id="filter-btns">
+                        <li class="active" data-target="all">All</li>
+                        <li data-target="app">App</li>
+                        <li data-target="web">Web</li>
+                        <li data-target="design">Design</li>
+                    </ul>
+                </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="expertise-gallery">
 
-                        <div class="item" data-aos="zoom-in" >
-                            <div class="lines"></div>
-                            <div class="inner">
-<!--                                <a href="https://github.com/Anuki-Dilara/connect-four-game" target="_blank" style="cursor: pointer"></a>-->
-
-                                <img src="assets/images/projects/project%20%20(1).png" alt="chat app" />
-                                <div class="project-layer">
-                                    <h4> <b>Chat App</b></h4>
-                                    <h5> A multi-user real-time communication application designed using Socket Programming for group communication. </h5>
-                                </div>
+            <div class="row">
+                <div class="portfolio-gallery">
+                    <!--project 1-->
+                    <div class="item" data-aos="zoom-in" data-id="app">
+                        <div class="lines"></div>
+                        <div class="inner">
+                            <img src="assets/images/projects/project%20%20(1).png" alt="portfolio"/>
+                            <div class="project-layer">
+                                <button class="demo-btn">Demo</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-details-card" id="project-details-card-one">
+                        <div class="card-content">
+                            <h4>Chat App</h4>
+                            <ul>
+                                <li> Description - Creating a chat application involves several components, including a front-end interface, a back-end server, real-time communication, and database management. </li>
+                                <li> Created - <span> Feb 2024</span></li>
+                                <li> FrontEnd Technologies - <span> HTML , CSS</span></li>
+                                <li> BackEnd Technologies - <span> JavaFX </span></li>
+                                <li> Real-time Communication - <span> WebSockets, Socket.IO </span></li>
+                            </ul>
+                            <a href="https://github.com/Kavishka-Prabashara/Chat-Application-INP.git" target="_blank"> View Repository</a>
+                            <button class="close-btn">Close</button>
+                        </div>
+                    </div>
 
-                        <div class="item" data-aos="zoom-in">
-                            <div class="lines"></div>
-                            <div class="inner">
-                                <img src="assets/images/projects/project%20%20(2).png" alt="portfolio"/>
-                                <div class="project-layer">
-                                    <h4><b>Gold Ceylon Coffee</b></h4>
-                                    <h5>The Gold Ceylon Coffee Shop project is a JavaFX-based application integrated with SQL for database management.</h5>
-                                </div>
+                    <!--project 2-->
+                    <div class="item" data-aos="zoom-in" data-id="web">
+                        <div class="lines"></div>
+                        <div class="inner">
+                            <img src="assets/images/projects/project%20%20(2).png" alt="portfolio"/>
+                            <div class="project-layer">
+                                <button class="demo-btn">Demo</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-details-card" id="project-details-card-two">
+                        <div class="card-content">
+                            <h4>Coffee shop Management System</h4>
+                            <ul>
+                                <li> Description - A coffee shop management system is a comprehensive software solution designed to streamline and automate various operations in a coffee shop. </li>
+                                <li> Created - <span> mar 2024</span></li>
+                                <li> FrontEnd Technologies - <span> HTML, CSS, JavaScript</span></li>
+                                <li> BackEnd Technologies - <span> Node.js </span></li>
+                                <li> Real-time Communication - <span> WebSockets, Socket.IO </span></li>
+                            </ul>
+                            <a href="https://github.com/Kavishka-Prabashara?tab=repositories" target="_blank"> View Repository</a>
+                            <button class="close-btn">Close</button>
+                        </div>
+                    </div>
 
-                        <div class="item" data-aos="zoom-in" >
-                            <div class="lines"></div>
-                            <div class="inner">
-                                <img src="assets/images/projects/project%20%20(3).png" alt="portfolio"/>
-                                <div class="project-layer">
-                                    <h4><b>RestoRise</b></h4>
-                                    <h5>Restorise Restaurant Project is a comprehensive software solution designed to streamline various aspects of restaurant management.</h5>
-                                </div>
+                    <!--project 3-->
+                    <div class="item" data-aos="zoom-in" data-id="app">
+                        <div class="lines"></div>
+                        <div class="inner">
+                            <img src="assets/images/projects/project%20%20(3).png" alt="portfolio"/>
+                            <div class="project-layer">
+                                <button class="demo-btn">Demo</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-details-card" id="project-details-card-three">
+                        <div class="card-content">
+                            <h4>RestoRise - Restaurent Management system</h4>
+                            <ul>
+                                <li> Description - A restaurant management system (RMS) is a comprehensive solution designed to streamline the various operations of a restaurant, such as order management, reservation booking, inventory control, staff scheduling, billing, and customer relationship management.  </li>
+                                <li> Created - <span> Jan 2024</span></li>
+                                <li> FrontEnd Technologies - <span> HTML, CSS, JavaScript</span></li>
+                                <li> BackEnd Technologies - <span> Node.js </span></li>
+                                <li> Real-time Communication - <span> WebSockets, Socket.IO </span></li>
+                            </ul>
+                            <a href="https://github.com/Kavishka-Prabashara/Restorise-Restaurant-and-Bar-Layered-Architecture.git" target="_blank">View Repository</a>
+                            <button class="close-btn">Close</button>
+                        </div>
+                    </div>
 
-                        <div class="item" data-aos="zoom-in" >
-                            <div class="lines"></div>
-                            <div class="inner">
-                                <img src="assets/images/projects/project%20%20(4).png" alt="portfolio"/>
-                                <div class="project-layer">
-                                    <h4><b>Paramitha 05 Pre School</b></h4>
-                                    <h5>The Paramitha Preschool Project is a comprehensive educational platform tailored specifically for preschool-aged children.</h5>
-                                </div>
+                    <!--project 4-->
+                    <div class="item" data-aos="zoom-in" data-id="web">
+                        <div class="lines"></div>
+                        <div class="inner">
+                            <img src="assets/images/projects/project%20%20(4).png" alt="portfolio"/>
+                            <div class="project-layer">
+                                <button class="demo-btn">Demo</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-details-card" id="project-details-card-four">
+                        <div class="card-content">
+                            <h4>Pre School Management System</h4>
+                            <ul>
+                                <li> Description -  A preschool management system is a software solution designed to facilitate the efficient administration and operation of preschools or childcare centers. </li>
+                                <li> Created - <span> Jan 2024</span></li>
+                                <li> FrontEnd Technologies - <span> HTML, CSS </span></li>
+                                <li> BackEnd Technologies - <span> JavaScript (Node.js) </span></li>
+                            </ul>
+                            <a href="https://github.com/Anuki-Dilara/connect-four-game" target="_blank">View Repository</a>
+                            <button class="close-btn">Close</button>
+                        </div>
+                    </div>
 
-                        <div class="item" data-aos="zoom-in" >
-                            <div class="lines"></div>
-                            <div class="inner">
-                                <img src="assets/images/projects/project%20%20(5).png" alt="portfolio"/>
-                                <div class="project-layer">
-                                    <h4><b>Induruwa Catering</b></h4>
-                                    <h5>The Induruwa Catering Service Project is a sophisticated software solution tailored specifically for catering businesses.</h5>
-                                </div>
+                    <!--project 5-->
+                    <div class="item" data-aos="zoom-in" data-id="app">
+                        <div class="lines"></div>
+                        <div class="inner">
+                            <img src="assets/images/projects/project%20%20(5).png" alt="portfolio"/>
+                            <div class="project-layer">
+                                <button class="demo-btn">Demo</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-details-card" id="project-details-five">
+                        <div class="card-content">
+                            <h4>BookWorm - Library Management System </h4>
+                            <ul>
+                                <li> Description -  A library management system (LMS) is software that helps manage and organize library resources, including books, digital media, and other materials.</li>
+                                <li> Created - <span> Mar 2024</span></li>
+                                <li> FrontEnd Technologies - <span> HTML, CSS </span></li>
+                                <li> BackEnd Technologies - <span> JavaScript (Node.js) </span></li>
+                                <li> Database -</li>
+                            </ul>
+                            <a href="https://github.com/Kavishka-Prabashara/BOOKWORM-Library-Management-System-ORM.git" target="_blank">View Repository</a>
+                            <button class="close-btn">Close</button>
+                        </div>
+                    </div>
 
-                        <div class="item" data-aos="zoom-in" >
-                            <div class="lines"></div>
-                            <div class="inner">
-                                <img src="assets/images/projects/project%20%20(6).png" alt="portfolio"/>
-                                <div class="project-layer">
-                                    <h4><b>Induruwa Hospital</b></h4>
-                                    <h5>The Induruwa Hospital Project is a comprehensive health management system designed to improve hospital facilities in the area.</h5>
-                                </div>
+                    <!--project 6-->
+                    <div class="item" data-aos="zoom-in" data-id="design">
+                        <div class="lines"></div>
+                        <div class="inner">
+                            <img src="assets/images/projects/project%20%20(6).png" alt="portfolio"/>
+                            <div class="project-layer">
+                                <button class="demo-btn">Demo</button>
                             </div>
                         </div>
-
+                    </div>
+                    <div class="project-details-card" id="project-details-card-six">
+                        <div class="card-content">
+                            <h4>Hospital Management System</h4>
+                            <ul>
+                                <li> Description -  </li>
+                                <li> Design - figma </li>
+                                <li> Created - <span> Mar 2024</span></li>
+                                <li> FrontEnd Technologies - <span> HTML, CSS </span></li>
+                            </ul>
+                            <a href="https://github.com/Anuki-Dilara/connect-four-game" target="_blank">View Repository</a>
+                            <button class="close-btn">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
         <!-- ****************************************** Expertise End ********************************************* -->
 
     <!-- ****************************************** assignment start ********************************************* -->
@@ -483,25 +578,33 @@
 
     <!-- ****************************************** contact End ********************************************* -->
 
-<div class="footer-basic">
-    <footer class="footer">
-        <div class="social">
-            <a href="https://lk.linkedin.com/in/kavishka-prabashara-wijerathna-899588189"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/kavishka.prabashara.7?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/Kavishka_Prabashara"><i class="fa-brands fa-instagram"> </i></a>
-            <a href="https://github.com/Kavishka-Prabashara"><i class="fa-brands fa-github"></i></i></a>
-        </div>
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="https://lk.linkedin.com/in/kavishka-prabashara-wijerathna-899588189"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/kavishka.prabashara.7?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/Kavishka_Prabashara"><i class="fa-brands fa-instagram"> </i></a>
+                <a href="https://github.com/Kavishka-Prabashara"><i class="fa-brands fa-github"></i></a>
+            </div>
 
-        <div class="content" data-aos="fade-up">
-            <p class="foot-para"> If you could touch my creative mind ,,, <br>
-                I’m always open to discussing new projects, creative ideas and designs to be part of your vision ...
-            </p>
-        </div>
+            <div class="row">
+                <ul>
+                    <li><a href="#about_me">About Me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#assignments">Tasks</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#service">Service</a></li>
+                </ul>
+            </div>
 
-        <p class="copyright">© COPYRIGHTS 2024. ALL RIGHTS RESERVED.
-            <br>Designed by Kavishka Prabashara Wijerathna</p>
+            <div class="row">
+                 Copyright © 2024 - All rights reserved || Designed By: Kavishka Prabashara
+            </div>
+        </div>
     </footer>
-</div>
+
+
 
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
@@ -515,7 +618,61 @@
             once: true, // Whether animation should happen only once - while scrolling down
             mirror: false, // Whether elements should animate out while scrolling past them
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('#filter-btns li');
+            const items = document.querySelectorAll('.portfolio-gallery .item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to the clicked button
+                    button.classList.add('active');
+
+                    const target = button.getAttribute('data-target');
+
+                    // Show all items if 'all' is selected
+                    items.forEach(item => {
+                        if (target === 'all' || item.getAttribute('data-id') === target) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const demoBtns = document.querySelectorAll('.demo-btn');
+            const projectDetailsCards = document.querySelectorAll('.project-details-card');
+            const closeBtns = document.querySelectorAll('.close-btn');
+
+            demoBtns.forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    projectDetailsCards.forEach(card => card.style.display = 'none'); // Hide all cards first
+                    projectDetailsCards[index].style.display = 'block'; // Show the corresponding card
+                });
+            });
+
+            closeBtns.forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    projectDetailsCards[index].style.display = 'none'; // Hide the corresponding card
+                });
+            });
+
+            // Optional: Close the card if the user clicks outside of it
+            window.addEventListener('click', (event) => {
+                projectDetailsCards.forEach(card => {
+                    if (event.target === card) {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
     </script>
+
 
 
 </body>
