@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Timeline</title>
+    <style>
+        :root {
+            --bg-color: #222;
+            --main-color: #4eefc9;
+            --font-color: #fff;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--font-color);
+        }
+
+        .education {
+            padding: 100px 15px;
+            background: var(--bg-color);
+        }
+
+        .education .edu_heading {
+            text-align: center;
+            margin-bottom: 5rem;
+            font-size: 2.5rem;
+            color: var(--font-color);
+        }
+
+        .edu_timeline-items {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .edu_timeline-items::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            background-color: var(--main-color);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: -30px;
+            width: 100%;
+            position: relative;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            text-align: right;
+            padding-right: calc(50% + 30px);
+        }
+
+        .timeline-item:nth-child(even) {
+            padding-left: calc(50% + 30px);
+        }
+
+        .timeline-dot {
+            height: 21px;
+            width: 21px;
+            background-color: var(--main-color);
+            box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            top: 10px;
+        }
+
+        .timeline-date {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--font-color);
+            margin: 6px 0 15px;
+        }
+
+        .timeline-content {
+            background-color: var(--bg-color);
+            border: 3px solid var(--main-color);
+            padding: 10px 24px;
+            /* border-radius: 4rem; */
+            box-shadow: 0 0 10px var(--main-color);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            height: 52%;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--main-color);
+        }
+
+        .timeline-content .edu_h3 {
+            font-size: 20px;
+            color: var(--font-color);
+            margin: 0 0 10px;
+            font-weight: 500;
+        }
+
+        .timeline-content .edu-para {
+            color: var(--font-color);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding: 15px;
+                text-align: center;
+            }
+
+            .edu_timeline-items::before {
+                left: calc(50% - 2.5px);
+            }
+        }
+    </style>
+</head>
+<body>
+<section class="education" id="education">
+    <!--first-->
+    <div class="edu_timeline-items">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2017</div>
+            <div class="timeline-content">
+                <h3 class="edu_h3">Ordinary Level - O/L</h3>
+                <div class="edu-para">
+                    G/Gonagala National School 2007-2017
+                </div>
+            </div>
+        </div>
+
+        <!--second-->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021(2022)</div>
+            <div class="timeline-content">
+                <h3 class="edu_h3"> Advanced Level - A/L</h3>
+                <p class="edu-para">
+                    K/DS Senanayake National School 2018-2022
+                </p>
+            </div>
+        </div>
+
+        <!--third-->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2018</div>
+            <div class="timeline-content">
+                <h3 class="edu_h3">One World Foundation </h3>
+                <p class="edu-para">
+                    Completed English Course
+                </p>
+            </div>
+        </div>
+
+        <!--last-->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+                <h3 class="edu_h3">Computer Science</h3>
+                <p class="edu-para">
+                    IJSE - Institute of software Engineering
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
