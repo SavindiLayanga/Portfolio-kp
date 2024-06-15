@@ -4,134 +4,288 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education Timeline</title>
+
     <style>
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+            transform-style: preserve-3d;
+            touch-action: none;
+        }
+
         :root {
-            --bg-color: #222;
-            --main-color: #4eefc9;
-            --font-color: #fff;
+            --rotation-y: 0;
+            --rotation-x: 0;
+            --size: 80vmin;
+            --segment: calc(var(--size) / 100);
+            --loading-speed: 10s;
+            --color: hsl(210 80% 50%);
+            --total-length: 400;
+            --segments-per-second: calc(var(--loading-speed) / var(--total-length));
         }
 
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--font-color);
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background: hsl(0 0% 90%);
+            font-family:  'Google Sans', sans-serif, system-ui;
         }
 
-        .education {
-            padding: 100px 15px;
-            background: var(--bg-color);
+        #flip:checked ~ .container {
+            --rotation-y: -24;
+            --rotation-x: -24;
         }
 
-        .education .edu_heading {
-            text-align: center;
-            margin-bottom: 5rem;
-            font-size: 2.5rem;
-            color: var(--font-color);
+        [for] {
+            transform: translateZ(200vmin);
+            position: fixed;
+            inset: 0;
         }
 
-        .edu_timeline-items {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .loading-label {
+            position: absolute;
+            left: 0;
+            bottom: 110%;
+            font-weight: bold;
+            font-size: clamp(1rem, var(--size) * 0.025, 6rem);
+        }
+
+        .container {
+            width: var(--size);
+            aspect-ratio: 16 / 1.25;
             position: relative;
         }
 
-        .edu_timeline-items::before {
+        .scene {
+            height: 100%;
+            width: 100%;
+            transform: translate3d(0, 0, 100vmin) rotateX(calc(var(--rotation-y, 0) * 1deg)) rotateY(calc(var(--rotation-x, 0) * 1deg));
+            transition: transform 0.25s;
+        }
+
+        h1 {
+            opacity: 0.5;
+            color: var(--color);
+            font-size: calc(var(--depth, 20vmin) * 0.25);
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            margin: 0;
+        }
+
+        .bar {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: var(--columns);
+        }
+
+        .bar__segment {
+            background: hsl(0 0% 100%);
+            transform: translateZ(calc(var(--depth) * var(--segment)));
+            border: calc(var(--segment) * 0.5) solid black;
+        }
+
+        .bar__segment:after {
             content: "";
             position: absolute;
-            width: 5px;
-            height: 100%;
-            background-color: var(--main-color);
-            left: 50%;
-            transform: translateX(-50%);
+            inset: 0;
+            background: var(--color);
+            transform-origin: 0 50%;
+            animation-name: var(--name);
+            animation-duration: var(--loading-speed);
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
 
-        .timeline-item {
-            margin-bottom: -30px;
-            width: 100%;
-            position: relative;
-            padding-left: 15px;
-            padding-right: 15px;
+        @keyframes reveal {
+            from {
+                transform: scaleX(0);
+            }
         }
 
-        .timeline-item:nth-child(odd) {
-            text-align: right;
-            padding-right: calc(50% + 30px);
+        .bar__segment:not(:first-of-type, :last-of-type) {
+            border-left: transparent;
+            border-right: transparent;
         }
 
-        .timeline-item:nth-child(even) {
-            padding-left: calc(50% + 30px);
+        .bar__segment:first-of-type {
+            border-right: transparent;
+        }
+        .bar__segment:last-of-type {
+            border-left: transparent;
         }
 
-        .timeline-dot {
-            height: 21px;
-            width: 21px;
-            background-color: var(--main-color);
-            box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 50%;
-            top: 10px;
+        .bar__segment:not(.bar__segment--aligned) {
+            width: calc(var(--segment) * var(--length));
+            transform-origin: 0 50%;
+            filter: brightness(0.78);
+            transform: translateZ(calc(var(--depth) * var(--segment))) rotateY(var(--rotation, 0deg));
         }
 
-        .timeline-date {
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--font-color);
-            margin: 6px 0 15px;
+        .bar__segment--front {
+            --rotation: -90deg;
         }
 
-        .timeline-content {
-            background-color: var(--bg-color);
-            border: 3px solid var(--main-color);
-            padding: 10px 24px;
-            /* border-radius: 4rem; */
-            box-shadow: 0 0 10px var(--main-color);
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            height: 52%;
+        .bar__segment--back {
+            --rotation: 90deg;
         }
 
-        .timeline-content:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px var(--main-color);
-        }
-
-        .timeline-content .edu_h3 {
-            font-size: 20px;
-            color: var(--font-color);
-            margin: 0 0 10px;
-            font-weight: 500;
-        }
-
-        .timeline-content .edu-para {
-            color: var(--font-color);
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 22px;
-        }
-
-        @media (max-width: 768px) {
-            .timeline-item:nth-child(odd),
-            .timeline-item:nth-child(even) {
-                padding: 15px;
-                text-align: center;
+        @keyframes segment-1 {
+            0% {
+                transform: scaleX(0);
+            }
+            5%, 100% {
+                transform: scaleX(1);
             }
 
-            .edu_timeline-items::before {
-                left: calc(50% - 2.5px);
+        }
+        @keyframes segment-2 {
+            0%, 5% {
+                transform: scaleX(0);
+            }
+            12.5%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-3 {
+            0%, 12.5% {
+                transform: scaleX(0);
+            }
+            15%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-4 {
+            0%, 15% {
+                transform: scaleX(0);
+            }
+            27.5%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-5 {
+            0%, 27.5% {
+                transform: scaleX(0);
+            }
+            30%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-6 {
+            0%, 30% {
+                transform: scaleX(0);
+            }
+            45%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-7 {
+            0%, 45% {
+                transform: scaleX(0);
+            }
+            47.5%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-8 {
+            0%, 47.5% {
+                transform: scaleX(0);
+            }
+            65%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-9 {
+            0%, 65% {
+                transform: scaleX(0);
+            }
+            70%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-10 {
+            0%, 70% {
+                transform: scaleX(0);
+            }
+            82.5%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-11 {
+            0%, 82.5% {
+                transform: scaleX(0);
+            }
+            90%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-12 {
+            0%, 90% {
+                transform: scaleX(0);
+            }
+            95%, 100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes segment-13 {
+            0%, 95% {
+                transform: scaleX(0);
+            }
+            100% {
+                transform: scaleX(1);
             }
         }
     </style>
 </head>
 <body>
+<input class="sr-only" type="checkbox" id="flip">
+<label for="flip"></label>
+<h1>tap.</h1>
+<div class="container">
+    <div class="scene">
+        <span class="loading-label">Loading...</span>
+        <div class="bar" style="--columns: 20% 0 10% 0 10% 0 10% 0 20% 0 10% 0 20%; --total-length: 400;">
+            <div style="--name:  segment-1; --delay:   0; --length: 20; --depth:   0;" class="bar__segment bar__segment--aligned"></div>
+            <div style="--name:  segment-2; --delay:  20; --length: 30; --depth:   0;" class="bar__segment bar__segment--front"></div>
+            <div style="--name:  segment-3; --delay:  50; --length: 10; --depth:  30;" class="bar__segment bar__segment--aligned"></div>
+            <div style="--name:  segment-4; --delay:  60; --length: 50; --depth:  30;" class="bar__segment bar__segment--back"></div>
+            <div style="--name:  segment-5; --delay: 110; --length: 10; --depth: -20;" class="bar__segment bar__segment--aligned"></div>
+            <div style="--name:  segment-6; --delay: 120; --length: 60; --depth: -20;" class="bar__segment bar__segment--front"></div>
+            <div style="--name:  segment-7; --delay: 180; --length: 10; --depth:  40;" class="bar__segment bar__segment--aligned"></div>
+            <div style="--name:  segment-8; --delay: 190; --length: 70; --depth:  40;" class="bar__segment bar__segment--back"></div>
+            <div style="--name:  segment-9; --delay: 260; --length: 20; --depth: -30;" class="bar__segment bar__segment--aligned"></div>
+            <div style="--name: segment-10; --delay: 280; --length: 50; --depth: -30;" class="bar__segment bar__segment--front"></div>
+            <div style="--name: segment-11; --delay: 330; --length: 30; --depth:  20;" class="bar__segment bar__segment--aligned"></div>
+            <div style="--name: segment-12; --delay: 360; --length: 20; --depth:  20;" class="bar__segment bar__segment--back"></div>
+            <div style="--name: segment-13; --delay: 380; --length: 20; --depth:   0;" class="bar__segment bar__segment--aligned"></div>
+        </div>
+    </div>
+</div>
+
 <section class="education" id="education">
+
+    <div class="shadow-topic" data-aos="zoom-in"  data-aos-duration="1000">
+        <h1> E D U C A T I O N </h1>
+    </div>
     <!--first-->
     <div class="edu_timeline-items">
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-left">
             <div class="timeline-dot"></div>
             <div class="timeline-date">2017</div>
             <div class="timeline-content">
@@ -143,38 +297,38 @@
         </div>
 
         <!--second-->
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right">
             <div class="timeline-dot"></div>
             <div class="timeline-date">2021(2022)</div>
             <div class="timeline-content">
                 <h3 class="edu_h3"> Advanced Level - A/L</h3>
-                <p class="edu-para">
+                <div class="edu-para">
                     K/DS Senanayake National School 2018-2022
-                </p>
+                </div>
             </div>
         </div>
 
         <!--third-->
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-left">
             <div class="timeline-dot"></div>
             <div class="timeline-date">2018</div>
             <div class="timeline-content">
                 <h3 class="edu_h3">One World Foundation </h3>
-                <p class="edu-para">
+                <div class="edu-para">
                     Completed English Course
-                </p>
+                </div>
             </div>
         </div>
 
         <!--last-->
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right">
             <div class="timeline-dot"></div>
             <div class="timeline-date">2023</div>
             <div class="timeline-content">
                 <h3 class="edu_h3">Computer Science</h3>
-                <p class="edu-para">
+                <div class="edu-para">
                     IJSE - Institute of software Engineering
-                </p>
+                </div>
             </div>
         </div>
     </div>

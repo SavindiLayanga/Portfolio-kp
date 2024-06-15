@@ -33,6 +33,7 @@
     border-radius: 25px;
     border: 2px solid var(--main-color);
 }
+
 #preloader{
     background: var(--bg-color);
     background-size: cover;
