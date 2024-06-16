@@ -1146,6 +1146,11 @@ p {
     box-shadow: rgba(0, 0, 0, 0.98) 0px 2px 5px -1px, rgb(141, 135, 135) 0px 1px 3px -1px;
 }
 
+.contact-form:hover{
+    box-shadow: 0 0 6px var(--main-color);
+
+}
+
 .contact-form h2{
     font-size: 30px;
     color: var(--main-sub-color);
