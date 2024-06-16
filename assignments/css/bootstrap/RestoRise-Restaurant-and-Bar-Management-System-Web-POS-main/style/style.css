@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#staff {
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+
+}
+#items {
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+header {
+
+}
+.navbar {
+    background-color: yellow;
+    font-family: "Samsung Sans", serif;
+    font-weight: bold;
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Add border */
+    border-radius: 10px; /* Add border-radius */
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+
+.full-width {
+    grid-column: 1 / span 3; /* Spans all 3 columns */
+}
+
+     /* Custom CSS for specific styling */
+ .dashboard-header {
+     text-align: center;
+     padding: 20px;
+     background-color: #007bff;
+     color: white;
+ }
+.sales-stats, .order-list, .menu, .staff {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+
+}
+#dashboardTitle {
+    color: black;
+    font-weight: bold;
+    font-family: "Samsung Sans", serif;
+}
+#logoID {
+    width: 200px;
+}
+
+body {
+    background-color: #282828;
+    color: #ffffff; /* Change this to your desired font color */
+    font-family: Arial, sans-serif; /* Change this to your desired font family */
+}
+input {
+    color: #cccccc;
+}
+.col-sm-6 {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+}
+
+@media (min-width: 1025px) {
+    .h-custom-2 {
+        height: 100%;
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.single-column .col {
+    flex: 1;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.double-column .col {
+    flex: 1;
+    padding: 20px;
+    background-color: #d0d0d0;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.row.double-column {
+    display: flex;
+    gap: 10px;
+}
+
+.row.single-column {
+    display: flex;
+}
+label {
+    color: #cccccc;
+}
+th , td {
+    color: #cccccc;
+}
+#navigation-bar .navbar-nav .nav-link {
+    color: #ffffff !important; /* White font color */
+}
+/* Optional: Custom style for navbar-brand */
+#navigation-bar .navbar-brand {
+    color: #ffffff !important;
+}
+
+
